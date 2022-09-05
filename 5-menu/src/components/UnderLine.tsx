@@ -1,0 +1,19 @@
+import { Typography, styled } from "@mui/material";
+const StyledUnderline = styled(Typography)(({ theme }) => ({
+  "&::after": {
+    content: '""',
+    backgroundColor: "#c59d5f",
+    width: "5rem",
+    height: "0.2rem",
+    display: "block",
+    margin: "1rem auto",
+  },
+  marginRight: "auto",
+  marginLeft: "auto",
+  textAlign: "center",
+}));
+const UnderLine = ({ text }: { text: string }) => {
+  return <StyledUnderline variant="h3">{text}</StyledUnderline>;
+};
+
+export default UnderLine;
